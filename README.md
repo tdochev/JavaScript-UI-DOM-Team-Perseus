@@ -10,5 +10,5 @@ Name | TelerikAcademy user | GitHub user
 Цветомир Дочев | Tdochev | tdochev
 Николай Цветин | Cvetinn | NikolayTsvetin
 Ангел Язаров | Angel1985 | angel75013
-Димитър Несторов | dimitarnestorov | undefined
+Димитър Несторов | dimitarnestorov | dimitarnestorov
 Емил Димитров | qwerty123 | EmilPD
