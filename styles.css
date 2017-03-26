@@ -1,0 +1,43 @@
+body {
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.controls-container, .tools, .colors{
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.colors {
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.color {
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+
+}
+
+.tools svg {
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+
+canvas {
+    border: 1px solid black;
+
+}

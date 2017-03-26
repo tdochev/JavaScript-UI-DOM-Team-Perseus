@@ -1,0 +1,24 @@
+{
+  "name": "javascript-ui-dom-team-perseus",
+  "version": "1.0.0",
+  "description": "Team Work for JavaScript UI &amp; DOM (March 2017)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdochev/JavaScript-UI-DOM-Team-Perseus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdochev/JavaScript-UI-DOM-Team-Perseus/issues"
+  },
+  "homepage": "https://github.com/tdochev/JavaScript-UI-DOM-Team-Perseus#readme",
+  "dependencies": {
+    "@types/jquery": "^2.0.41",
+    "handlebars": "^4.0.6",
+    "jquery": "^3.2.1"
+  }
+}

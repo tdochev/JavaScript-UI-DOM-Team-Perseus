@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Simple Paint</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="controls-container">
+            <div class="tools">
+                <svg id="draw" width="34" height="34">{{{draw}}}</svg>
+                <svg id="rectangle" width="35" height="35">{{{rectangle}}}</svg>
+                <svg id="triangle" width="35" height="35">{{{triangle}}}</svg>
+                <svg id="circle" width="35" height="35">{{{circle}}} </svg>
+                <svg id="line-width" width="35" height="35">{{{lineWidth}}} </svg>
+                <svg id="delete" width="35" height="35">{{{delete}}}</svg>
+            </div>
+            <div class="colors">
+                <div class="color" data-color=""></div>
+                <div class="color" data-color=""></div>
+                <div class="color" data-color=""></div>
+                <div class="color" data-color=""></div>
+                <div class="color" data-color=""></div>
+            </div>
+        </div>
+        <canvas width="800" height="450"></canvas>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="./scripts/controlsTemplates.js"></script>
+    </script>
+</body>
+
+</html>
