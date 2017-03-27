@@ -12,6 +12,15 @@ class DrawingCanvas {
     static get yPos() { return this._yPos; }
     static set yPos(x) { this._yPos = x; }
 
+
+    static init() {
+        $(this.canvas).on('mousemove', $.proxy(this.draw, DrawingCanvas));
+        $(this.canvas).on('mousedown', $.proxy(this.mouseMoveEvent, DrawingCanvas));
+        $(this.canvas).on('mouseup', $.proxy(function () { this.mouseDown = false; }, DrawingCanvas));
+
+        return this;
+    }
+
     static draw(e) {
         this.xPos = e.clientX - canvas.offsetLeft;
         this.yPos = e.clientY - canvas.offsetTop;
@@ -20,7 +29,6 @@ class DrawingCanvas {
             this.context.lineTo(this.xPos, this.yPos);
             this.context.stroke();
         }
-        return this;
     }
 
     static mouseMoveEvent() {
@@ -28,16 +36,5 @@ class DrawingCanvas {
         this.context.beginPath();
         this.context.moveTo(this.xPos, this.yPos);
         $(this.canvas).on('mousemove', this.draw);
-    }
-
-    static init() {
-        $(this.canvas).on('mousemove', $.proxy(this.draw, DrawingCanvas));
-        $(this.canvas).on('mousedown', $.proxy(this.mouseMoveEvent, DrawingCanvas));
-        $(this.canvas).on('mouseup', $.proxy(function () { this.mouseDown = false; }, DrawingCanvas));
-
-        return this;
-
-
-
     }
 }
