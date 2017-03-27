@@ -21,7 +21,6 @@ class DrawingCanvas {
             this.context.stroke();
         }
         return this;
-        //
     }
 
     static mouseMoveEvent() {
@@ -34,7 +33,7 @@ class DrawingCanvas {
     static init() {
         $(this.canvas).on('mousemove', $.proxy(this.draw, DrawingCanvas));
         $(this.canvas).on('mousedown', $.proxy(this.mouseMoveEvent, DrawingCanvas));
-        $(this.canvas).on('mouseup', $.proxy(function() { this.mouseDown = false; }, DrawingCanvas));
+        $(this.canvas).on('mouseup', $.proxy(function () { this.mouseDown = false; }, DrawingCanvas));
 
         return this;
 
