@@ -4,7 +4,11 @@ class Engine {
         this._selectedTool;
         this._lineWidth;
 
-        ControlsManager.initiateControls();
+        ControlsManager
+            .initiateControls()
+            .attachEvents();
+
+        DrawingCanvas.init();
     }
 
     get selectedColor() {
