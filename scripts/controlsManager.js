@@ -16,17 +16,24 @@ class ControlsManager {
 
     static initiateControls() {
         // set tools SVG icons
-        let template = Handlebars.compile($('.tools').html());
-        $('.tools').html(template(this.icons));
+        var $tools = $('.tools');
+        let template = Handlebars.compile($tools.html());
+        $tools.html(template(this.icons));
         // fill color options
         this.colors.forEach((x, i) => {
             $('.colors div').eq(i).css('background-color', x).attr('data-color', x);
         })
+
+        $tools.children().on("click", this.selectTool);
         return this;
     }
 
-    static selectTool() {
-
+    static selectTool(event) {
+        if(event.currentTarget.id === "delete") {
+            var canvas = DrawingCanvas.canvas;
+            DrawingCanvas.context.clearRect(0, 0, canvas.width, canvas.height);
+            localStorage.removeItem("image");
+        }
     }
 
     static selectColor() {
@@ -39,6 +46,6 @@ class ControlsManager {
 
     static attachEvents() {
 
-        return this
+        return this;
     }
 }
