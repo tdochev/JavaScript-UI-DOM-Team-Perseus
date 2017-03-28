@@ -14,9 +14,14 @@ class DrawingCanvas {
 
 
     static init() {
+        this.loadImage();
+
         $(this.canvas).on('mousemove', $.proxy(this.draw, DrawingCanvas));
         $(this.canvas).on('mousedown', $.proxy(this.mouseMoveEvent, DrawingCanvas));
-        $(document.documentElement).on('mouseup', $.proxy(function () { this.mouseDown = false; }, DrawingCanvas));
+        $(document.documentElement).on('mouseup', $.proxy(function () {
+            this.mouseDown = false;
+            localStorage.setItem("image", this.canvas.toDataURL());
+        }, DrawingCanvas));
 
         return this;
     }
@@ -36,5 +41,16 @@ class DrawingCanvas {
         this.context.beginPath();
         this.context.moveTo(this.xPos, this.yPos);
         $(this.canvas).on('mousemove', this.draw);
+    }
+
+    static loadImage() {
+        var img = new Image();
+        img.onload = $.proxy(function() {
+            this.context.drawImage(img, 0, 0);
+        }, DrawingCanvas);
+        var storedImage = localStorage.getItem("image");
+        if(storedImage !== null) {
+            img.src = storedImage;
+        }
     }
 }
