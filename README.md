@@ -1,11 +1,5 @@
 # JavaScript-UI-DOM-Team-Perseus
 Team Work for JavaScript UI &amp; DOM (March 2017)
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Description</title>
-        <meta charset="UTF-8">
-    </head>
     <body>
     <h1>Description file for teamwork</h1>
     <p>We decided to create a paint-like program where people can practice their drawing skills.</p>
