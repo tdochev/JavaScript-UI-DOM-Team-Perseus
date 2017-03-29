@@ -35,7 +35,7 @@ Team Work for JavaScript UI &amp; DOM (March 2017)
 Name | TelerikAcademy user | GitHub user
 -----|-------|-------
 Кристиян Николов | Dawnut | Dawnut
-Найден Момински | Nayden_mominski | undefined
+Найден Момински | Nayden_mominski | NaydenMominski
 Цветомир Дочев | Tdochev | tdochev
 Николай Цветин | Cvetinn | NikolayTsvetin
 Ангел Язаров | Angel1985 | angel75013
