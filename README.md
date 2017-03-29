@@ -1,6 +1,25 @@
 # JavaScript-UI-DOM-Team-Perseus
 Team Work for JavaScript UI &amp; DOM (March 2017)
 
+Description file for teamwork
+
+We decided to create a paint-like program where people can practice their drawing skills.
+
+You can draw freely or you can use the shapes we've added for you!
+
+We have:
+Triangle,
+Square,
+Circle.
+Our color pallette has:
+Red,
+Green,
+Blue,
+Yellow,
+Purple,
+And of course the default black color.
+Enjoy, team Perseus. :)
+
 # Team
 
 Name | TelerikAcademy user | GitHub user
