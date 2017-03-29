@@ -1,0 +1,3 @@
+class LineWidth extends Tool {
+
+}

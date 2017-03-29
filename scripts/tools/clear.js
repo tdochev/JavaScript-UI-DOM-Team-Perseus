@@ -1,0 +1,3 @@
+class Clear  extends Tool{
+    
+}
