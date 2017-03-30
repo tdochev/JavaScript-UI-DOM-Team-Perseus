@@ -1,4 +1,5 @@
 .wrapper {
+    margin-top: 150px;
     display: flex;
     flex-flow: row;
     align-items: top;
@@ -10,40 +11,53 @@
     flex-flow: column;
 }
 
+canvas {
+    border: 1px solid black; 
+    border-radius: 10px;
+    box-shadow: 20px 20px 22px -13px rgba(136,136,136,1);
+    cursor: crosshair;
+}
+
 .colors {
     margin-top: 20px;
     align-items: flex-end;
 }
 
-.colors div {
+.color {
     border: 1px solid black;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     margin: 5px 7px 7px 0;
     cursor: pointer;
+    opacity: 0;
+    animation: expand 2s linear;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
-.colors div:hover {
+.color:hover, .colors input:checked+label {
     border: 3px solid black;
     margin: 3px 5px 5px 0;
 }
 
-.tools svg:hover {
-    background-color: #ededed;
+input[type="radio"] {
+    display: none;
 }
 
-.tools svg {
-    border: 1px solid black;
+.tool:hover, .tools input:checked+label:not([data-tool="clear"]) {
+    background-color: #acccf7;
+}
+
+.tool {
+    margin: 5px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
-    margin: 5px;
 }
 
- path, .selected-tool {
-    fill-opacity: 0;
-    stroke: #000;
-    stroke-width: 3;
+ path{
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: draw 6s linear;
@@ -56,9 +70,8 @@
     stroke-dashoffset: 0;
   }
 }
-
-canvas {
-    border: 1px solid black; 
-    border-radius: 10px;
-    box-shadow: 20px 20px 22px -13px rgba(136,136,136,1);
+@keyframes expand {
+  to {
+    opacity: 1;
+  }
 }
