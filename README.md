@@ -25,7 +25,8 @@ Team Work for JavaScript UI &amp; DOM (March 2017)
     </ul>
     <p>The app is written using ES6 syntax and is OOP based. More controls and colors can be added dynamically. 
     Controls are animated upon page load.</p>
-    <img src="sample.png">
+    <img src="sample1.png">
+    <img src="sample2.png">
     </body>
 </html>
 
