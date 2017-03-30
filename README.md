@@ -1,32 +1,33 @@
 # JavaScript-UI-DOM-Team-Perseus
 Team Work for JavaScript UI &amp; DOM (March 2017)
     <body>
-    <h1>Description file for teamwork</h1>
-    <p>We decided to create a paint-like program where people can practice their drawing skills.</p>
-    <p>You can draw freely or you can use the shapes we've added for you!</p>
-    <ul> We have: 
-        <li>Triangle,</li>
-        <li>Square,</li>
-        <li>Circle.</li>
+    <p>This is a simple Paint-like app</p>
+    <p>You can draw freely or you can use the shapes.</p>
+    <ul> Available tools: 
+    <li>Free drawing</li>
+        <li>Triangle</li>
+        <li>Square</li>
+        <li>Circle</li>
+<li>Line</li>
+        <li>Clear canvas</li>
+        <li>Different colors</li>
     </ul>
-    <ul>Our color pallette has:
-        <li>Red,</li>
-        <li>Green,</li>
-        <li>Blue,</li>
-        <li>Yellow,</li>
-        <li>Purple,</li>
-        <li>And of course the default black color.</li>
-    </ul>
+    
     <ul>We've used:
-        <li>HTML,</li>
-        <li>CSS,</li>
-        <li>JavaScript,</li>
-        <li>jQuery,</li>
-        <li>Canvas,</li>
-        <li>SVG,</li>
-        <li>Handlebars</li>    
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Handlebars</li>
+        <li>Canvas</li>
+        <li>SVG</li>
+        <li>Fabric Js</li>    
     </ul>
-    <p>Enjoy, team Perseus. :)</p>
+    
+    <p>The app is written using ES6 syntax and is OOP based. More controls and colors can be added dynamically. Controls are animated upon page load.</p>
+    
+    <img src="sample.png">
+    
     </body>
 </html>
 
