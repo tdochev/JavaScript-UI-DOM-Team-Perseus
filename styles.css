@@ -1,3 +1,7 @@
+body {
+    background-color: #eaeaea
+}
+
 .wrapper {
     margin-top: 150px;
     display: flex;
@@ -14,8 +18,13 @@
 canvas {
     border: 1px solid black; 
     border-radius: 10px;
+<<<<<<< HEAD
     box-shadow: 20px 20px 22px -13px rgba(136,136,136,1);
     cursor: crosshair;
+=======
+    background-color: white;
+    box-shadow: 20px 20px 22px -13px rgba(136,136,136,1);
+>>>>>>> 0136cf2ef91c5ae56778beccb29e9f8c2f8d8ab2
 }
 
 .colors {
@@ -45,7 +54,11 @@ input[type="radio"] {
     display: none;
 }
 
+<<<<<<< HEAD
 .tool:hover, .tools input:checked+label:not([data-tool="clear"]) {
+=======
+.tool:hover, .tools input:checked+label {
+>>>>>>> 0136cf2ef91c5ae56778beccb29e9f8c2f8d8ab2
     background-color: #acccf7;
 }
 
