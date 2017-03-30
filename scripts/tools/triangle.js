@@ -3,19 +3,11 @@ class Triangle {
     static get canvas() { return ToolsManager.fabricCanvas }
 
     static select() {
-        $("#selec").click(function () {
-            Triangle.canvas.isDrawingMode = false;
-            Triangle.canvas.selection = true;
-            Triangle.canvas.off('mouse:down');
-            Triangle.canvas.off('mouse:move');
-            Triangle.canvas.off('mouse:up');
-            Triangle.canvas.forEachObject(function (o) { o.setCoords() })
-        })
-        var tri, isDown, origX, origY;
+        let tri, isDown, origX, origY;
 
-        Triangle.canvas.observe('mouse:down', function (o) {
+        Triangle.canvas.observe('mouse:down', (o) => {
             isDown = true;
-            var pointer = Triangle.canvas.getPointer(o.e);
+            let pointer = Triangle.canvas.getPointer(o.e);
             origX = pointer.x;
             origY = pointer.y;
             tri = new fabric.Triangle({
@@ -31,14 +23,14 @@ class Triangle {
             Triangle.canvas.add(tri);
         });
 
-        Triangle.canvas.observe('mouse:move', function (o) {
+        Triangle.canvas.observe('mouse:move', (o) => {
             if (!isDown) return;
-            var pointer = Triangle.canvas.getPointer(o.e);
+            let pointer = Triangle.canvas.getPointer(o.e);
             tri.set({ width: Math.abs(origX - pointer.x), height: Math.abs(origY - pointer.y) });
             Triangle.canvas.renderAll();
         });
 
-        Triangle.canvas.on('mouse:up', function (o) {
+        Triangle.canvas.on('mouse:up', (o) => {
             isDown = false;
         });
     }

@@ -5,7 +5,7 @@ class Circle {
     static select() {
         let circle, isDown, origX, origY;
 
-        Circle.canvas.observe('mouse:down', function (o) {
+        Circle.canvas.observe('mouse:down', (o) => {
             isDown = true;
             let pointer = Circle.canvas.getPointer(o.e);
             origX = pointer.x;
@@ -22,14 +22,14 @@ class Circle {
             Circle.canvas.add(circle);
         });
 
-        Circle.canvas.observe('mouse:move', function (o) {
+        Circle.canvas.observe('mouse:move', (o) => {
             if (!isDown) return;
             let pointer = Circle.canvas.getPointer(o.e);
             circle.set({ radius: Math.abs(origX - pointer.x) });
             Circle.canvas.renderAll();
         });
 
-        Circle.canvas.on('mouse:up', function (o) {
+        Circle.canvas.on('mouse:up', (o) => {
             isDown = false;
         });
     }

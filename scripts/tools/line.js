@@ -3,12 +3,12 @@ class Line {
     static get canvas() { return ToolsManager.fabricCanvas; }
 
     static select() {
-        var line, isDown;
+        let line, isDown;
 
-        Line.canvas.on('mouse:down', function (o) {
+        Line.canvas.on('mouse:down', (o) => {
             isDown = true;
-            var pointer = Line.canvas.getPointer(o.e);
-            var points = [pointer.x, pointer.y, pointer.x, pointer.y];
+            let pointer = Line.canvas.getPointer(o.e);
+            let points = [pointer.x, pointer.y, pointer.x, pointer.y];
             line = new fabric.Line(points, {
                 strokeWidth: 5,
                 fill: ToolsManager.selectedColor,
@@ -19,14 +19,14 @@ class Line {
             Line.canvas.add(line);
         });
 
-        Line.canvas.on('mouse:move', function (o) {
+        Line.canvas.on('mouse:move', (o) => {
             if (!isDown) return;
-            var pointer = Line.canvas.getPointer(o.e);
+            let pointer = Line.canvas.getPointer(o.e);
             line.set({ x2: pointer.x, y2: pointer.y });
             Line.canvas.renderAll();
         });
 
-        Line.canvas.on('mouse:up', function (o) {
+        Line.canvas.on('mouse:up', (o) => {
             isDown = false;
         });
     }

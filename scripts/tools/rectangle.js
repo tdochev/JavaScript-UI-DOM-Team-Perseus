@@ -3,14 +3,14 @@ class Rectangle {
     static get canvas() { return ToolsManager.fabricCanvas }
 
     static select() {
-        var rect, isDown, origX, origY;
+        let rect, isDown, origX, origY;
 
-        Rectangle.canvas.on('mouse:down', function (o) {
+        Rectangle.canvas.on('mouse:down', (o) => {
             isDown = true;
-            var pointer = Rectangle.canvas.getPointer(o.e);
+            let pointer = Rectangle.canvas.getPointer(o.e);
             origX = pointer.x;
             origY = pointer.y;
-            var pointer = Rectangle.canvas.getPointer(o.e);
+             pointer = Rectangle.canvas.getPointer(o.e);
             rect = new fabric.Rect({
                 left: origX,
                 top: origY,
@@ -25,9 +25,9 @@ class Rectangle {
             Rectangle.canvas.add(rect);
         });
 
-        Rectangle.canvas.on('mouse:move', function (o) {
+        Rectangle.canvas.on('mouse:move', (o) => {
             if (!isDown) return;
-            var pointer = Rectangle.canvas.getPointer(o.e);
+            let pointer = Rectangle.canvas.getPointer(o.e);
 
             if (origX > pointer.x) {
                 rect.set({ left: Math.abs(pointer.x) });
@@ -43,7 +43,7 @@ class Rectangle {
             Rectangle.canvas.renderAll();
         });
 
-        Rectangle.canvas.on('mouse:up', function (o) {
+        Rectangle.canvas.on('mouse:up', (o) => {
             isDown = false;
         });
     }
