@@ -1,5 +1,6 @@
 # JavaScript-UI-DOM-Team-Perseus
 Team Work for JavaScript UI &amp; DOM (March 2017)
+<html>
     <body>
     <p>This is a simple Paint-like app</p>
     <p>You can draw freely or you can use the shapes.</p>
@@ -8,12 +9,12 @@ Team Work for JavaScript UI &amp; DOM (March 2017)
         <li>Triangle</li>
         <li>Square</li>
         <li>Circle</li>
-<li>Line</li>
+        <li>Line</li>
         <li>Clear canvas</li>
         <li>Different colors</li>
     </ul>
     
-    <ul>We've used:
+    <ul> We've used:
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
