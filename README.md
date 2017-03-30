@@ -13,7 +13,6 @@ Team Work for JavaScript UI &amp; DOM (March 2017)
         <li>Clear canvas</li>
         <li>Different colors</li>
     </ul>
-    
     <ul> We've used:
         <li>HTML</li>
         <li>CSS</li>
@@ -24,11 +23,9 @@ Team Work for JavaScript UI &amp; DOM (March 2017)
         <li>SVG</li>
         <li>Fabric Js</li>    
     </ul>
-    
-    <p>The app is written using ES6 syntax and is OOP based. More controls and colors can be added dynamically. Controls are animated upon page load.</p>
-    
+    <p>The app is written using ES6 syntax and is OOP based. More controls and colors can be added dynamically. 
+    Controls are animated upon page load.</p>
     <img src="sample.png">
-    
     </body>
 </html>
 
